@@ -27,7 +27,7 @@ width: 350px;
   }
 `;
 
-export const SubmitButton = styled.button`
+export const Button = styled.button`
 font-weight: ${p => p.theme.fontWeights.bold};
   color: ${p => p.theme.colors.white};
   background-color: ${p => p.theme.colors.accentColor};
@@ -43,7 +43,3 @@ font-weight: ${p => p.theme.fontWeights.bold};
     background-color: ${p => p.theme.colors.hoverColor};
   }
 `;
-
-// export const DeleteButton = styled.button`
-
-// `;
