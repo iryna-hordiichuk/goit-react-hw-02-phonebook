@@ -9,7 +9,7 @@ export const FilterInput = styled.input`
   border-radius: ${p => p.theme.radii.normal};
   :focus,
   :hover {
-    border-color: ${p => p.theme.colors.hoverColor};
+    border-color: ${p => p.theme.colors.accentColor};
     outline: none;
   }
 `;

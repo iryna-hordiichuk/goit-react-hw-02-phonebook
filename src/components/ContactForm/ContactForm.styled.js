@@ -1,14 +1,14 @@
 import styled from 'styled-components';
 
 export const ContactForm = styled.form`
-display: flex;
+  display: flex;
   flex-direction: column;
   align-items: center;
   gap: ${p => p.theme.space[5]}px;
 `;
 
 export const ContactLabel = styled.label`
- display: flex;
+  display: flex;
   flex-direction: column;
   align-items: center;
   gap: ${p => p.theme.space[3]}px;
@@ -22,7 +22,7 @@ width: 350px;
   border-radius: ${p => p.theme.radii.normal};
   :focus,
   :hover {
-    border-color: ${p => p.theme.colors.hoverColor};
+    border-color: ${p => p.theme.colors.accentColor};
     outline: none;
   }
 `;
@@ -30,7 +30,7 @@ width: 350px;
 export const Button = styled.button`
 font-weight: ${p => p.theme.fontWeights.bold};
   color: ${p => p.theme.colors.white};
-  background-color: ${p => p.theme.colors.accentColor};
+  background-color: ${p => p.theme.colors.buttonColor};
   padding-top: ${p => p.theme.space[3]}px;
   padding-bottom: ${p => p.theme.space[3]}px;
   padding-left: ${p => p.theme.space[5]}px;
@@ -40,6 +40,6 @@ font-weight: ${p => p.theme.fontWeights.bold};
   cursor: pointer;
   :hover,
   :focus {
-    background-color: ${p => p.theme.colors.hoverColor};
+    background-color: ${p => p.theme.colors.accentColor};
   }
 `;

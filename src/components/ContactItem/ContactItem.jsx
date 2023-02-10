@@ -5,7 +5,7 @@ import { Button } from 'components/ContactForm/ContactForm.styled';
 export const ContactItem = ({ id, name, number, onDeleteContact }) => {
   return (
     <Item>
-      {name}:{number}
+      {name}: {number}
       <Button
         type="button"
         onClick={() => {

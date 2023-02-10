@@ -9,6 +9,6 @@ export const SectionTitle = styled.h2`
   margin-bottom: ${p => p.theme.space[4]}px;
 `;
 
-export const Text = styled.p`
-  text-align: center;
-`;
+// export const Text = styled.p`
+//   text-align: center;
+// `;

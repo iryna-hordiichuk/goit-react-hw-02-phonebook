@@ -3,9 +3,9 @@ import { nanoid } from 'nanoid';
 import { ContactList } from 'components/Contactlist';
 import { Form } from 'components/ContactForm';
 import { Filter } from 'components/Filter';
-import {PageTitle, SectionTitle, Text} from './App.styled';
-// import { Notify } from 'notiflix';
-// import {MdContactPhone } from 'react-icons/md';
+import {PageTitle, SectionTitle} from './App.styled';
+import { Notify } from 'notiflix';
+import {FcSearch } from 'react-icons/fc';
 
 import { Container } from 'components/Container/Container.jsx';
 
@@ -36,12 +36,13 @@ export class App extends Component {
     );
 
     if (isAdded) {
-      alert(`${name} is already in contacts.`);
+      Notify.info(`${name} is already in contacts.`);
       return false;
     } else {
       this.setState(({ contacts }) => ({
         contacts: [newContact, ...contacts],
       }));
+      Notify.info(`${name} has been added to your Phonebook.`);
     }
   };
 
@@ -69,13 +70,30 @@ export class App extends Component {
           ml={'auto'}
           mr={'auto'}
         >
+        <Container
+            as="div"
+            width={600}
+            ml={'auto'}
+            mr={'auto'}
+            backgroundColor={'secondBackground'}
+            p={40}
+          >
          <PageTitle>Phonebook</PageTitle>
+
+         <Container as="section" pt={30} pb={30}>
           <Form onSubmit={this.addContact} />
+          </Container>
+
+        <Container as="section" pt={30} pb={30}>
        <SectionTitle>Contacts</SectionTitle>
-        <Text>Find contacts by name</Text>
-          <Filter value={this.state.filter} onChange={this.changeFilter} />
+          <Filter value={this.state.filter} onChange={this.changeFilter} icon={FcSearch} />
           <ContactList contacts={visibleContacts} onDeleteContact={this.deleteContact} />
+          </Container>
+
+          </Container>
+
         </Container>
+
       </Container>
     );
   }
