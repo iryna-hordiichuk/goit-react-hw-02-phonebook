@@ -1,4 +1,4 @@
-This is Telephone book application, it allows to add, delete and filter contacts.
+  This is a Phonebook application, it allows to add, delete and filter contacts.
 It uses a controlled form written in vanilla ReactDOM. 
 ContactForm's state is located in the ContactForm component. 
 It has two fields: name and number. Method onChange is used to
